@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adithya — Data Science &amp; Cybersecurity</title>
+<meta name="description" content="B.Tech CS student specializing in Data Science, Machine Learning &amp; Cybersecurity. Building AI-powered tools and security systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Particle burst canvas (fixed, full page) -->
+<canvas id="particleCanvas"></canvas>
+
+<!-- Gradient blob background canvas -->
+<canvas id="bgCanvas"></canvas>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<!-- ══ NAV ══ -->
+<nav id="mainNav">
+  <a href="#hero" class="nav-logo magnetic">adithya<span class="logo-dot">.</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about"   data-section="about">About</a></li>
+    <li><a href="#skills"  data-section="skills">Skills</a></li>
+    <li><a href="#projects" data-section="projects">Projects</a></li>
+    <li><a href="#certifications" data-section="certifications">Certs</a></li>
+    <li><a href="#leadership" data-section="leadership">Leadership</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="#contact" class="btn-nav magnetic ripple-btn">Get in Touch</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="#about"          class="mmlink">About</a>
+  <a href="#skills"         class="mmlink">Skills</a>
+  <a href="#projects"       class="mmlink">Projects</a>
+  <a href="#certifications" class="mmlink">Certifications</a>
+  <a href="#leadership"     class="mmlink">Leadership</a>
+  <a href="#contact"        class="mmlink">Contact</a>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <!-- Spotlight overlay -->
+  <canvas id="spotCanvas"></canvas>
+
+  <div class="hero-ambient-label">Vijayawada · AP · IN</div>
+
+  <!-- Status chip -->
+  <div class="hero-profile-chip">
+    <div class="chip-dot"></div>
+    <span class="chip-text">Open to Internships &amp; Collaborations</span>
+    <span class="chip-badge">2026</span>
+  </div>
+
+  <!-- MASSIVE hero display — chars split for stagger -->
+  <h1 class="hero-display char-reveal" id="heroTitle">
+    Data <em class="accent-serif">Science</em><br>
+    &amp;&nbsp;<span class="accent-cyan">Cyber</span>security<br>
+    <span class="gradient-text">Engineer</span>
+  </h1>
+
+  <!-- Typewriter subtitle -->
+  <p class="hero-tw-line" id="heroTw" style="margin-top:1.2rem;"></p>
+
+  <!-- Sub-row: tagline + CTAs -->
+  <div class="hero-sub-row">
+    <p class="hero-tagline">
+      <strong>Yanamalamanda Adithya</strong> — B.Tech CS at ALIET.<br>
+      Building AI-powered solutions that are resilient, intelligent &amp; real.
+    </p>
+    <div class="hero-cta-group">
+      <a href="#projects"  class="btn-pill magnetic ripple-btn" id="ctaProjects">View Projects →</a>
+      <a href="https://www.linkedin.com/in/yanamalamanda-adithya-9852a9366/" target="_blank" class="btn-pill-outline magnetic ripple-btn">LinkedIn ↗</a>
+      <a href="https://github.com/adithyayanamalamanda" target="_blank" class="btn-circle magnetic" title="GitHub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Stats strip with count-up -->
+  <div class="hero-stats-strip">
+    <div>
+      <div class="hero-stat-num"><span class="count-num" data-target="4">0</span><span style="color:var(--orange)">+</span></div>
+      <div class="hero-stat-label">Projects Built</div>
+    </div>
+    <div>
+      <div class="hero-stat-num"><span class="count-num" data-target="5">0</span><span style="color:var(--orange)">+</span></div>
+      <div class="hero-stat-label">Certifications</div>
+    </div>
+    <div>
+      <div class="hero-stat-num"><span class="count-num" data-target="2">0</span><span style="color:var(--orange)">+</span></div>
+      <div class="hero-stat-label">Years Learning</div>
+    </div>
+    <div>
+      <div class="hero-stat-num" style="color:var(--cyan)">∞</div>
+      <div class="hero-stat-label">Curiosity</div>
+    </div>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="scroll-hint">
+    <div class="scroll-hint-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section id="about" style="position:relative">
+  <div class="section-watermark">01</div>
+  <div class="section-header reveal">
+    <div class="section-eyebrow">About Me</div>
+    <h2 class="section-heading">Turning Data into<br><em>Decisions</em> &amp; Systems</h2>
+  </div>
+  <div class="about-layout">
+    <div class="about-body reveal">
+      <p>I'm a <strong>Computer Science student</strong> at Andhra Loyola Institute of Engineering and Technology, specializing in Data Science. My work lives at the intersection of <span class="highlight-orange">AI/ML</span> and <span class="highlight-cyan">Cybersecurity</span> — building intelligent systems that are also resilient.</p>
+      <p>From AI-powered wellness platforms to webcam spyware detection tools, I believe in <strong>learning by doing</strong>. I've attended hands-on workshops in ethical hacking and big data analytics, earning certifications from Google and Deloitte.</p>
+      <p>Beyond code, I co-founded <strong>Mission Placements</strong> to bridge education and employment, and volunteer with <strong>NSS</strong> to deliver tech seminars in government schools.</p>
+      <div class="about-links">
+        <a href="https://github.com/adithyayanamalamanda" target="_blank" class="about-link ripple-btn">⬡ GitHub</a>
+        <a href="https://www.linkedin.com/in/yanamalamanda-adithya-9852a9366/" target="_blank" class="about-link ripple-btn">in LinkedIn</a>
+        <a href="https://leetcode.com/u/1Mn6Iqzqh4/" target="_blank" class="about-link ripple-btn">⌘ LeetCode</a>
+        <a href="https://www.geeksforgeeks.org/profile/adithyayana" target="_blank" class="about-link ripple-btn">{ } GFG</a>
+        <a href="https://adithya-portfolio1.netlify.app/" target="_blank" class="about-link ripple-btn">↗ Live Site</a>
+      </div>
+    </div>
+    <div class="about-interest-card tilt-card reveal">
+      <div class="tilt-shine"></div>
+      <div class="interest-card-title">Areas of Interest</div>
+      <ul class="interest-list">
+        <li>Machine Learning &amp; AI Systems</li>
+        <li>Cybersecurity &amp; Ethical Hacking</li>
+        <li>Data Science &amp; Analytics</li>
+        <li>Network Security &amp; Pen Testing</li>
+        <li>AI Detection Systems</li>
+        <li>Data-Driven Problem Solving</li>
+        <li>Educational Technology</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SKILLS ══ -->
+<section id="skills" style="position:relative">
+  <div class="section-watermark">02</div>
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Technical Skills</div>
+    <h2 class="section-heading">Tools &amp; <em>Technologies</em></h2>
+  </div>
+  <div class="skills-grid">
+
+    <div class="skill-card tilt-card reveal">
+      <div class="tilt-shine"></div>
+      <div class="skill-card-header">
+        <div class="skill-card-icon">🐍</div>
+        <div class="skill-card-title">Programming</div>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span><span class="skill-tag">SQL</span>
+        <span class="skill-tag">JavaScript</span><span class="skill-tag">TypeScript</span>
+        <span class="skill-tag">PowerShell</span>
+      </div>
+
+    </div>
+
+    <div class="skill-card tilt-card reveal">
+      <div class="tilt-shine"></div>
+      <div class="skill-card-header">
+        <div class="skill-card-icon">📊</div>
+        <div class="skill-card-title">Data Science &amp; AI</div>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">Machine Learning</span><span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">scikit-learn</span><span class="skill-tag">Pandas</span>
+        <span class="skill-tag">NumPy</span><span class="skill-tag">Model Training</span>
+      </div>
+
+    </div>
+
+    <div class="skill-card tilt-card reveal">
+      <div class="tilt-shine"></div>
+      <div class="skill-card-header">
+        <div class="skill-card-icon">🔐</div>
+        <div class="skill-card-title">Cybersecurity</div>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">Kali Linux</span><span class="skill-tag">Nmap</span>
+        <span class="skill-tag">Wireshark</span><span class="skill-tag">Metasploit</span>
+        <span class="skill-tag">Burp Suite</span><span class="skill-tag">Ethical Hacking</span>
+      </div>
+
+    </div>
+
+    <div class="skill-card tilt-card reveal">
+      <div class="tilt-shine"></div>
+      <div class="skill-card-header">
+        <div class="skill-card-icon">🌐</div>
+        <div class="skill-card-title">Web &amp; Frontend</div>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">React.js</span><span class="skill-tag">Vite</span>
+        <span class="skill-tag">HTML/CSS</span><span class="skill-tag">REST APIs</span>
+        <span class="skill-tag">OAuth</span>
+      </div>
+
+    </div>
+
+    <div class="skill-card tilt-card reveal">
+      <div class="tilt-shine"></div>
+      <div class="skill-card-header">
+        <div class="skill-card-icon">🗄️</div>
+        <div class="skill-card-title">Databases</div>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">MySQL</span><span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">MongoDB</span>
+      </div>
+
+    </div>
+
+    <div class="skill-card tilt-card reveal">
+      <div class="tilt-shine"></div>
+      <div class="skill-card-header">
+        <div class="skill-card-icon">⚙️</div>
+        <div class="skill-card-title">Dev Tools</div>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">Git &amp; GitHub</span><span class="skill-tag">Linux</span>
+        <span class="skill-tag">VS Code</span><span class="skill-tag">Jupyter</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ PROJECTS ══ -->
+<section id="projects" style="position:relative">
+  <div class="section-watermark">03</div>
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Projects</div>
+    <h2 class="section-heading">Things I've <em>Built</em></h2>
+  </div>
+  <div class="projects-layout">
+
+    <div class="project-featured tilt-card reveal">
+      <div class="tilt-shine"></div>
+      <div class="project-featured-visual">
+        <div class="proj-num-big">01</div>
+        <div class="proj-icon-large">🌱</div>
+      </div>
+      <div class="project-featured-body">
+        <div class="project-cat-badge">AgriTech Platform</div>
+        <div class="project-featured-title">AgriLink</div>
+        <p class="project-featured-desc">A comprehensive agricultural platform integrating land monitoring, equipment rental, and market prices to support modern farming practices. Empowers farmers with data-driven insights.</p>
+        <div class="project-tags">
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">Frontend</span>
+          <span class="project-tag">Web Platform</span>
+          <span class="project-tag">2026</span>
+        </div>
+        <a href="https://github.com/adithyayanamalamanda/AgriLink" target="_blank" class="project-link ripple-btn">View on GitHub →</a>
+      </div>
+    </div>
+
+    <div class="projects-row">
+      <div class="project-card tilt-card reveal">
+        <div class="tilt-shine"></div>
+        <div class="project-num">02 / Security / Tool</div>
+        <div class="project-title">Webcam Spyware Security System</div>
+        <p class="project-desc">Comprehensive security tool with real-time intruder detection and webcam protection. Features dual logging, facial recognition, and system-level threat detection.</p>
+        <div class="project-tags">
+          <span class="project-tag">Python</span><span class="project-tag">Computer Vision</span>
+          <span class="project-tag">PowerShell</span><span class="project-tag">2026</span>
+        </div>
+        <a href="https://github.com/adithyayanamalamanda/webcam-spyware-security" target="_blank" class="project-link">View on GitHub →</a>
+      </div>
+      <div class="project-card tilt-card reveal">
+        <div class="tilt-shine"></div>
+        <div class="project-num">03 / Education Tech</div>
+        <div class="project-title">Mission Placements</div>
+        <p class="project-desc">A holistic placement preparation platform designed to help students bridge the gap between education and employment through structured and guided learning paths.</p>
+        <div class="project-tags">
+          <span class="project-tag">Platform</span><span class="project-tag">Careers</span>
+          <span class="project-tag">Web</span><span class="project-tag">2026</span>
+        </div>
+        <a href="https://github.com/adithyayanamalamanda/mission-placements" target="_blank" class="project-link">View on GitHub →</a>
+      </div>
+    </div>
+
+    <div class="projects-row">
+      <div class="project-card tilt-card reveal">
+        <div class="tilt-shine"></div>
+        <div class="project-num">04 / Health / AI</div>
+        <div class="project-title">Youth Mental Wellness</div>
+        <p class="project-desc">Mental wellness assessment platform with AI-powered engine. Implements Google OAuth, automated PDF reports, and robust mental health metrics.</p>
+        <div class="project-tags">
+          <span class="project-tag">JavaScript</span><span class="project-tag">AI/ML</span>
+          <span class="project-tag">HealthTech</span><span class="project-tag">2026</span>
+        </div>
+        <a href="https://github.com/adithyayanamalamanda/youth-mental-wellness" target="_blank" class="project-link">View on GitHub →</a>
+      </div>
+      <div class="project-card tilt-card reveal">
+        <div class="tilt-shine"></div>
+        <div class="project-num">05 / Frontend / Layout</div>
+        <div class="project-title">NetraOS</div>
+        <p class="project-desc">OS-inspired user interface focused on fast lightweight performance. Features a modular component library built for a responsive and intuitive web experience.</p>
+        <div class="project-tags">
+          <span class="project-tag">React.js</span><span class="project-tag">TypeScript</span>
+          <span class="project-tag">Vite</span><span class="project-tag">2026</span>
+        </div>
+        <a href="https://github.com/adithyayanamalamanda/NetraOS" target="_blank" class="project-link">View on GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ CERTIFICATIONS ══ -->
+<section id="certifications" style="position:relative">
+  <div class="section-watermark">04</div>
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Certifications &amp; Workshops</div>
+    <h2 class="section-heading">Continuous <em>Learning</em></h2>
+  </div>
+  <div class="cert-grid">
+    <div class="cert-card tilt-card reveal">
+      <div class="tilt-shine"></div>
+      <div class="cert-icon">🛡️</div>
+      <div><div class="cert-name">15-Day Cybersecurity Workshop</div><div class="cert-by">APMSMEDC · Ethical Hacking &amp; Pen Testing</div></div>
+      <div class="cert-year">2024</div>
+    </div>
+    <div class="cert-card tilt-card reveal">
+      <div class="tilt-shine"></div>
+      <div class="cert-icon">📦</div>
+      <div><div class="cert-name">6-Day Big Data Analytics Workshop</div><div class="cert-by">Professional Training Program</div></div>
+      <div class="cert-year">2024</div>
+    </div>
+    <div class="cert-card tilt-card reveal">
+      <div class="tilt-shine"></div>
+      <div class="cert-icon">📈</div>
+      <div><div class="cert-name">Google Analytics Certification</div><div class="cert-by">Google</div></div>
+      <div class="cert-year">2024</div>
+    </div>
+    <div class="cert-card tilt-card reveal">
+      <div class="tilt-shine"></div>
+      <div class="cert-icon">🔷</div>
+      <div><div class="cert-name">Data Analytics Job Simulation</div><div class="cert-by">Deloitte Australia</div></div>
+      <div class="cert-year">2024</div>
+    </div>
+    <div class="cert-card tilt-card reveal">
+      <div class="tilt-shine"></div>
+      <div class="cert-icon">🤖</div>
+      <div><div class="cert-name">AI Tools &amp; AI-Powered People Manager</div><div class="cert-by">Professional Workshop</div></div>
+      <div class="cert-year">2024</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ LEADERSHIP ══ -->
+<section id="leadership" style="position:relative">
+  <div class="section-watermark">05</div>
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Leadership &amp; Activities</div>
+    <h2 class="section-heading">Beyond the <em>Code</em></h2>
+  </div>
+  <div class="leadership-grid">
+    <div class="lead-card tilt-card reveal">
+      <div class="tilt-shine"></div>
+      <div class="lead-card-top">
+        <div class="lead-icon">🚀</div>
+        <div><div class="lead-title">Co-Founder — Mission Placements</div><div class="lead-period">Nov 2025 — Present</div></div>
+      </div>
+      <ul class="lead-bullets">
+        <li>Co-founded career placement guidance for students</li>
+        <li>Developing mentoring programs to bridge education and employment</li>
+        <li>Organizing workshops on emerging tech &amp; best practices</li>
+      </ul>
+    </div>
+    <div class="lead-card tilt-card reveal">
+      <div class="tilt-shine"></div>
+      <div class="lead-card-top">
+        <div class="lead-icon">🌿</div>
+        <div><div class="lead-title">NSS Volunteer</div><div class="lead-period">2023 — Present</div></div>
+      </div>
+      <ul class="lead-bullets">
+        <li>Delivered tech seminars on Data Science &amp; AI to school students</li>
+        <li>Promoted digital literacy and STEM education</li>
+        <li>Community service focused on educational empowerment</li>
+      </ul>
+    </div>
+    <div class="lead-card tilt-card reveal">
+      <div class="tilt-shine"></div>
+      <div class="lead-card-top">
+        <div class="lead-icon">🎤</div>
+        <div><div class="lead-title">Technical Presenter &amp; Speaker</div><div class="lead-period">2023 — Present</div></div>
+      </div>
+      <ul class="lead-bullets">
+        <li>Presented research topics to faculty via structured presentations</li>
+        <li>Simplified complex technical concepts for diverse audiences</li>
+        <li>Mentored junior students in technical problem-solving</li>
+      </ul>
+    </div>
+    <div class="lead-card tilt-card reveal">
+      <div class="tilt-shine"></div>
+      <div class="lead-card-top">
+        <div class="lead-icon">🤝</div>
+        <div><div class="lead-title">Team Coordinator &amp; Mentor</div><div class="lead-period">2023 — Present</div></div>
+      </div>
+      <ul class="lead-bullets">
+        <li>Coordinated group projects across multiple disciplines</li>
+        <li>Guided peers through collaborative problem-solving</li>
+        <li>Fostered a culture of peer learning and knowledge sharing</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EDUCATION ══ -->
+<section id="education" style="position:relative">
+  <div class="section-watermark">06</div>
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Education</div>
+    <h2 class="section-heading">Academic <em>Journey</em></h2>
+  </div>
+  <div class="edu-timeline">
+    <div class="edu-item reveal">
+      <div class="edu-dot">▲</div>
+      <div>
+        <div class="edu-school">Andhra Loyola Institute of Engineering and Technology</div>
+        <div class="edu-degree">B.Tech in Computer Science — Data Science Specialization</div>
+        <div class="edu-period">Aug 2023 — Present · Vijayawada, AP</div>
+        <div class="edu-note">Specializing in Data Science with focus on Cybersecurity, AI/ML, and research-oriented learning. Actively participating in workshops, NSS, and co-founding placement initiatives.</div>
+      </div>
+    </div>
+    <div class="edu-item reveal">
+      <div class="edu-dot">▲</div>
+      <div>
+        <div class="edu-school">MNM's Vijetha Junior College</div>
+        <div class="edu-degree">Intermediate — MPC (Maths, Physics, Chemistry)</div>
+        <div class="edu-period">Aug 2021 — May 2023 · Andhra Pradesh</div>
+        <div class="edu-note">Completed Intermediate with MPC stream, building the mathematical and analytical foundation for engineering studies.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact" style="position:relative">
+  <div class="section-watermark">07</div>
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Contact</div>
+    <h2 class="section-heading">Let's <em>Connect</em></h2>
+  </div>
+  <div class="contact-layout">
+    <div class="reveal">
+      <p style="font-size:1rem;color:var(--text-off);line-height:1.82;margin-bottom:2rem;font-weight:400;">I'm open to internships, research collaborations, and exciting opportunities in Data Science and Cybersecurity. Whether you have a project in mind or just want to chat tech — reach out!</p>
+      <div class="contact-links">
+        <a href="mailto:adithyayanamalamanda@gmail.com" class="contact-link ripple-btn">
+          <div class="contact-link-icon">✉</div>
+          <div><div class="contact-link-label">Email</div><div class="contact-link-val">adithyayanamalamanda@gmail.com</div></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yanamalamanda-adithya-9852a9366/" target="_blank" class="contact-link ripple-btn">
+          <div class="contact-link-icon">in</div>
+          <div><div class="contact-link-label">LinkedIn</div><div class="contact-link-val">yanamalamanda-adithya</div></div>
+        </a>
+        <a href="https://github.com/adithyayanamalamanda" target="_blank" class="contact-link ripple-btn">
+          <div class="contact-link-icon">⬡</div>
+          <div><div class="contact-link-label">GitHub</div><div class="contact-link-val">adithyayanamalamanda</div></div>
+        </a>
+        <a href="tel:+917904411858" class="contact-link ripple-btn">
+          <div class="contact-link-icon">☎</div>
+          <div><div class="contact-link-label">Phone</div><div class="contact-link-val">+91 7904411858</div></div>
+        </a>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="availability-card tilt-card">
+        <div class="tilt-shine"></div>
+        <div class="avail-status">Currently Available</div>
+        <div class="avail-heading">Open for<br><em>opportunities</em></div>
+        <p class="avail-body">Based in Vijayawada, Andhra Pradesh, India. Open to remote collaborations and willing to relocate for the right opportunity.</p>
+        <div class="avail-tags">
+          <span class="avail-tag">Internships</span>
+          <span class="avail-tag">Research</span>
+          <span class="avail-tag">Collaborations</span>
+          <span class="avail-tag">Freelance</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="#hero" class="footer-logo">adithya<span class="logo-dot">.</span></a>
+  <p>© 2026 Yanamalamanda Adithya · <a href="mailto:adithyayanamalamanda@gmail.com">adithyayanamalamanda@gmail.com</a></p>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════════════
+     JAVASCRIPT — All interactive systems
+══════════════════════════════════════════════════════════════ -->
+<script>
+'use strict';
+
+/* ─────────────────────────────────────────────────────────────
+   1. ANIMATED GRADIENT BLOB BACKGROUND
+───────────────────────────────────────────────────────────── */
+(function(){
+  const cv  = document.getElementById('bgCanvas');
+  const ctx = cv.getContext('2d');
+  let W, H;
+  let scrollY = 0;
+
+  function resize(){ W = cv.width = window.innerWidth; H = cv.height = window.innerHeight; }
+  window.addEventListener('resize', resize, {passive:true});
+  window.addEventListener('scroll', ()=>{ scrollY = window.scrollY; }, {passive:true});
+  resize();
+
+  const blobs = [
+    {x:.15,y:.25,r:.42,hue:'123,97,255', a:.55,ph:0,   spd:.004},
+    {x:.75,y:.15,r:.38,hue:'0,255,224',  a:.45,ph:1.2, spd:.003},
+    {x:.55,y:.72,r:.36,hue:'255,168,0',  a:.42,ph:2.5, spd:.005},
+    {x:.88,y:.55,r:.30,hue:'0,100,255',  a:.35,ph:.8,  spd:.004},
+    {x:.10,y:.75,r:.28,hue:'255,60,120', a:.30,ph:3.3, spd:.003},
+  ];
+
+  function drawBlob(b){
+    const t  = performance.now() * b.spd;
+    const cx = (b.x + Math.sin(t + b.ph)*.06) * W;
+    const cy = (b.y + Math.cos(t*.7 + b.ph)*.07) * H - scrollY*.12;
+    const r  = b.r * Math.max(W,H) * (.9 + .1*Math.sin(t*1.3));
+    const a  = b.a  * (.8 + .2*Math.sin(t*.9 + b.ph));
+
+    const g = ctx.createRadialGradient(cx,cy,0,cx,cy,r);
+    g.addColorStop(0,   `rgba(${b.hue},${a})`);
+    g.addColorStop(.4,  `rgba(${b.hue},${a*.5})`);
+    g.addColorStop(1,   `rgba(${b.hue},0)`);
+
+    ctx.beginPath(); ctx.arc(cx,cy,r,0,Math.PI*2);
+    ctx.fillStyle = g; ctx.fill();
+  }
+
+  function loop(){
+    ctx.clearRect(0,0,W,H);
+
+    // Dark sweep base
+    const base = ctx.createRadialGradient(W*.5,H*.3,0, W*.5,H*.5,W*.9);
+    base.addColorStop(0,'rgba(18,10,35,1)');
+    base.addColorStop(1,'rgba(6,6,8,1)');
+    ctx.fillStyle = base; ctx.fillRect(0,0,W,H);
+
+    ctx.globalCompositeOperation = 'screen';
+    blobs.forEach(drawBlob);
+    ctx.globalCompositeOperation = 'source-over';
+
+    // Vignette
+    const vig = ctx.createRadialGradient(W*.5,H*.5,0,W*.5,H*.5,W*.7);
+    vig.addColorStop(0,'rgba(0,0,0,0)'); vig.addColorStop(1,'rgba(0,0,0,.65)');
+    ctx.fillStyle = vig; ctx.fillRect(0,0,W,H);
+
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
+
+
+/* ─────────────────────────────────────────────────────────────
+   2. HERO SPOTLIGHT — follows mouse inside hero section
+───────────────────────────────────────────────────────────── */
+(function(){
+  const hero   = document.getElementById('hero');
+  const spotCv = document.getElementById('spotCanvas');
+  if(!hero || !spotCv) return;
+  const sCtx = spotCv.getContext('2d');
+  let mx = 0, my = 0, active = false;
+
+  function resizeSpot(){
+    spotCv.width  = hero.offsetWidth;
+    spotCv.height = hero.offsetHeight;
+  }
+  resizeSpot();
+  window.addEventListener('resize', resizeSpot, {passive:true});
+
+  hero.addEventListener('mousemove', e => {
+    const r = hero.getBoundingClientRect();
+    mx = e.clientX - r.left; my = e.clientY - r.top;
+    active = true;
+  });
+  hero.addEventListener('mouseleave', ()=>{ active = false; });
+
+  let spotOpacity = 0;
+  function spotLoop(){
+    sCtx.clearRect(0,0,spotCv.width,spotCv.height);
+    spotOpacity = active ? Math.min(spotOpacity+.05, 1) : Math.max(spotOpacity-.04, 0);
+    if(spotOpacity > 0){
+      const g = sCtx.createRadialGradient(mx,my,0, mx,my,260);
+      g.addColorStop(0,   `rgba(255,168,0,${.08*spotOpacity})`);
+      g.addColorStop(.4,  `rgba(0,255,224,${.04*spotOpacity})`);
+      g.addColorStop(1,   'rgba(0,0,0,0)');
+      sCtx.fillStyle = g;
+      sCtx.fillRect(0,0,spotCv.width,spotCv.height);
+    }
+    requestAnimationFrame(spotLoop);
+  }
+  spotLoop();
+})();
+
+
+/* ─────────────────────────────────────────────────────────────
+   3. CUSTOM CURSOR with magnetic pull
+───────────────────────────────────────────────────────────── */
+(function(){
+  const cur  = document.getElementById('cursor');
+  const ring = document.getElementById('cursor-ring');
+  if(!cur || !ring || !window.matchMedia('(hover:hover)').matches) return;
+
+  let mx=0, my=0, rx=0, ry=0;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cur.style.left = mx+'px'; cur.style.top = my+'px';
+  });
+
+  (function ar(){
+    rx += (mx-rx)*.1; ry += (my-ry)*.1;
+    ring.style.left = rx+'px'; ring.style.top = ry+'px';
+    requestAnimationFrame(ar);
+  })();
+
+  document.querySelectorAll('a,button,.skill-card,.project-card,.project-featured,.cert-card,.lead-card').forEach(el => {
+    el.addEventListener('mouseenter', () => { cur.classList.add('hovering'); ring.classList.add('hovering'); });
+    el.addEventListener('mouseleave', () => { cur.classList.remove('hovering'); ring.classList.remove('hovering'); });
+  });
+})();
+
+
+/* ─────────────────────────────────────────────────────────────
+   4. 3D TILT on cards — mouse parallax tilt effect
+───────────────────────────────────────────────────────────── */
+(function(){
+  const MAXDEG = 10;
+  document.querySelectorAll('.tilt-card').forEach(card => {
+    const shine = card.querySelector('.tilt-shine');
+
+    card.addEventListener('mousemove', e => {
+      const r    = card.getBoundingClientRect();
+      const nx   = (e.clientX - r.left) / r.width  - .5;  // -0.5 → 0.5
+      const ny   = (e.clientY - r.top)  / r.height - .5;
+      const rotX = -ny * MAXDEG;
+      const rotY =  nx * MAXDEG;
+      card.style.transform = `perspective(800px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale3d(1.03,1.03,1.03)`;
+      if(shine){
+        shine.style.background = `radial-gradient(circle at ${(nx+.5)*100}% ${(ny+.5)*100}%, rgba(255,255,255,.12) 0%, transparent 60%)`;
+        shine.style.opacity = '1';
+      }
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+      if(shine){ shine.style.opacity = '0'; }
+    });
+  });
+})();
+
+
+/* ─────────────────────────────────────────────────────────────
+   5. MAGNETIC BUTTONS — elements attract cursor
+───────────────────────────────────────────────────────────── */
+(function(){
+  document.querySelectorAll('.magnetic').forEach(el => {
+    el.addEventListener('mousemove', e => {
+      const r   = el.getBoundingClientRect();
+      const cx  = r.left + r.width  / 2;
+      const cy  = r.top  + r.height / 2;
+      const dx  = (e.clientX - cx) * .35;
+      const dy  = (e.clientY - cy) * .35;
+      el.style.transform = `translate(${dx}px, ${dy}px)`;
+    });
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = '';
+    });
+  });
+})();
+
+
+/* ─────────────────────────────────────────────────────────────
+   6. RIPPLE EFFECT on buttons and links
+───────────────────────────────────────────────────────────── */
+(function(){
+  document.querySelectorAll('.ripple-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      const r    = btn.getBoundingClientRect();
+      const size = Math.max(r.width, r.height) * 2;
+      const x    = e.clientX - r.left - size/2;
+      const y    = e.clientY - r.top  - size/2;
+
+      const wave = document.createElement('span');
+      wave.className = 'ripple-wave';
+      wave.style.cssText = `width:${size}px;height:${size}px;left:${x}px;top:${y}px`;
+      btn.appendChild(wave);
+      setTimeout(()=> wave.remove(), 700);
+    });
+  });
+})();
+
+
+/* ─────────────────────────────────────────────────────────────
+   7. PARTICLE BURST on click (anywhere)
+───────────────────────────────────────────────────────────── */
+(function(){
+  const cv  = document.getElementById('particleCanvas');
+  const ctx = cv.getContext('2d');
+  let W, H;
+
+  function resize(){ W = cv.width = window.innerWidth; H = cv.height = window.innerHeight; }
+  window.addEventListener('resize', resize, {passive:true}); resize();
+
+  let particles = [];
+  const COLORS = ['#FFA800','#00FFE0','#7B61FF','#FF3CA0','#ffffff'];
+
+  document.addEventListener('click', e => {
+    const n = 14 + Math.floor(Math.random()*8);
+    for(let i = 0; i < n; i++){
+      const angle = (Math.PI*2/n)*i + Math.random()*.3;
+      const speed = 2 + Math.random()*5;
+      particles.push({
+        x: e.clientX, y: e.clientY,
+        vx: Math.cos(angle)*speed, vy: Math.sin(angle)*speed,
+        radius: 2.5 + Math.random()*3.5,
+        color: COLORS[Math.floor(Math.random()*COLORS.length)],
+        alpha: 1, decay: .03 + Math.random()*.04, gravity: .12,
+      });
+    }
+  });
+
+  function loop(){
+    ctx.clearRect(0,0,W,H);
+    particles = particles.filter(p => p.alpha > 0);
+    particles.forEach(p => {
+      p.vy += p.gravity;
+      p.x  += p.vx; p.y += p.vy;
+      p.alpha -= p.decay;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius*p.alpha, 0, Math.PI*2);
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = Math.max(0, p.alpha);
+      ctx.shadowBlur  = 12; ctx.shadowColor = p.color;
+      ctx.fill();
+    });
+    ctx.globalAlpha = 1; ctx.shadowBlur = 0;
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
+
+
+/* ─────────────────────────────────────────────────────────────
+   8. TYPEWRITER EFFECT in hero subtitle
+───────────────────────────────────────────────────────────── */
+(function(){
+  const el = document.getElementById('heroTw');
+  if(!el) return;
+
+  const lines = [
+    'B.Tech Computer Science — Data Science Specialization',
+    'Machine Learning · Cybersecurity · Ethical Hacking',
+    'Building AI-powered tools that solve real problems.',
+    'Co-Founder @ Mission Placements · NSS Volunteer',
+  ];
+
+  let li = 0, ci = 0, deleting = false, pauseLeft = 0;
+
+  function tick(){
+    const line = lines[li];
+    if(pauseLeft > 0){ pauseLeft--; setTimeout(tick, 80); return; }
+
+    if(!deleting){
+      el.textContent = line.slice(0,ci+1);
+      ci++;
+      if(ci >= line.length){ deleting = true; pauseLeft = 28; setTimeout(tick, 80); return; }
+      setTimeout(tick, 65 + Math.random()*40);
+    } else {
+      el.textContent = line.slice(0,ci-1);
+      ci--;
+      if(ci <= 0){ deleting = false; li = (li+1)%lines.length; pauseLeft = 8; setTimeout(tick, 80); return; }
+      setTimeout(tick, 30);
+    }
+  }
+  // Append blinking cursor element
+  const cursor = Object.assign(document.createElement('span'), {className:'tw-cursor'});
+  el.after(cursor);
+  setTimeout(tick, 1400);
+})();
+
+
+/* ─────────────────────────────────────────────────────────────
+   9. COUNT-UP animation on hero stats
+───────────────────────────────────────────────────────────── */
+(function(){
+  const nums = document.querySelectorAll('.count-num[data-target]');
+  let done = false;
+
+  function easeOut(t){ return 1 - Math.pow(1-t, 3); }
+  function runCounters(){
+    if(done) return; done = true;
+    const dur = 1800;
+    const start = performance.now();
+    function frame(now){
+      const t = Math.min((now-start)/dur, 1);
+      const e = easeOut(t);
+      nums.forEach(n => {
+        const target = parseInt(n.dataset.target);
+        n.textContent = Math.round(e * target);
+      });
+      if(t < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  // Trigger when hero stats strip enters view
+  const strip = document.querySelector('.hero-stats-strip');
+  if(strip){
+    new IntersectionObserver(entries => {
+      if(entries[0].isIntersecting) runCounters();
+    }, {threshold:.5}).observe(strip);
+  }
+})();
+
+
+/* ─────────────────────────────────────────────────────────────
+   10. SKILL BAR ANIMATION — bars fill on scroll into view
+───────────────────────────────────────────────────────────── */
+(function(){
+  const bars = document.querySelectorAll('.skill-bar-fill');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        const pct = parseFloat(e.target.dataset.pct || '1');
+        e.target.style.transform = `scaleX(${pct})`;
+        e.target.classList.add('bar-on');
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:.1});
+  bars.forEach(b => io.observe(b));
+})();
+
+
+/* ─────────────────────────────────────────────────────────────
+   11. SCROLL REVEAL with stagger
+───────────────────────────────────────────────────────────── */
+(function(){
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        const siblings = Array.from(e.target.parentElement.children).filter(c=>c.classList.contains('reveal'));
+        const idx = siblings.indexOf(e.target);
+        e.target.style.transitionDelay = (idx * .09) + 's';
+        e.target.classList.add('visible');
+      }
+    });
+  }, {threshold:.07, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+})();
+
+
+/* ─────────────────────────────────────────────────────────────
+   12. ACTIVE NAV LINK — highlight on scroll
+───────────────────────────────────────────────────────────── */
+(function(){
+  const sections = ['about','skills','projects','certifications','leadership','education','contact'];
+  const links = document.querySelectorAll('.nav-links a[data-section]');
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        links.forEach(l => {
+          l.classList.toggle('active', l.dataset.section === e.target.id);
+        });
+      }
+    });
+  }, {threshold:.35});
+
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if(el) io.observe(el);
+  });
+})();
+
+
+/* ─────────────────────────────────────────────────────────────
+   13. NAV SCROLL SHRINK
+───────────────────────────────────────────────────────────── */
+const mainNav = document.getElementById('mainNav');
+window.addEventListener('scroll', ()=>{
+  mainNav.classList.toggle('scrolled', window.scrollY > 60);
+}, {passive:true});
+
+
+/* ─────────────────────────────────────────────────────────────
+   14. HAMBURGER MENU
+───────────────────────────────────────────────────────────── */
+const tog = document.getElementById('navToggle');
+const mm  = document.getElementById('mobileMenu');
+tog.addEventListener('click', ()=>{ tog.classList.toggle('open'); mm.classList.toggle('open'); });
+document.querySelectorAll('.mmlink').forEach(a =>
+  a.addEventListener('click', ()=>{ tog.classList.remove('open'); mm.classList.remove('open'); })
+);
+
+
+/* ─────────────────────────────────────────────────────────────
+   15. PARALLAX subtle on section headings
+───────────────────────────────────────────────────────────── */
+(function(){
+  const watermarks = document.querySelectorAll('.section-watermark');
+  window.addEventListener('scroll', () => {
+    const sy = window.scrollY;
+    watermarks.forEach(w => {
+      const parent = w.parentElement;
+      const r = parent.getBoundingClientRect();
+      const relY = -r.top * .15;
+      w.style.transform = `translateY(${relY}px)`;
+    });
+  }, {passive:true});
+})();
+
+</script>
+</body>
+</html>
