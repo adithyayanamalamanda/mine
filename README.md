@@ -5,17 +5,17 @@
 Welcome to my personal portfolio! This project showcases my skills in **Data Science**, **Cybersecurity**, and full-stack web development through an interactive, modern UI.
 
 ## 📋 Table of Contents
-- [Live Demo](#-live-demo)
-- [About Me](#-about-me)
-- [Skills & Certifications](#-skills--certifications)
-- [Featured Projects](#-featured-projects)
-- [Tech Stack](#-tech-stack)
-- [Features](#-features)
-- [Getting Started](#-getting-started)
-- [Roadmap](#-roadmap)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Contact](#-contact)
+- [Live Demo](#🌐-live-demo)
+- [About Me](#👨‍💻-about-me)
+- [Skills & Certifications](#🏆-skills--certifications)
+- [Featured Projects](#🔥-featured-projects)
+- [Tech Stack](#🛠️-tech-stack)
+- [Features](#✨-features)
+- [Getting Started](#🏁-getting-started)
+- [Roadmap](#🗺️-roadmap)
+- [Contributing](#🤝-contributing)
+- [License](#📄-license)
+- [Contact](#📫-contact)
 
 ## 🌐 Live Demo
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://adithya-portfolio1.netlify.app/)
@@ -41,9 +41,11 @@ B.Tech Computer Science student specializing in **Data Science** at Andhra Loyol
 ## 🔥 Featured Projects
 | Project | Description | Tech | Link |
 |---------|-------------|------|------|
-| **AgriLink** | AI-powered crop disease detection | TensorFlow, Flask | [GitHub](https://github.com/user/agrilink) |
-| **Webcam Spyware Detector** | Real-time malware detection system | OpenCV, ML | [Demo](link) |
-| **Mission Placements** | Placement portal with AI matching | MERN Stack | [Live](link) |
+| **AgriLink** | Comprehensive agricultural platform with land monitoring, equipment rental, market prices | JavaScript, Frontend | [GitHub](https://github.com/adithyayanamalamanda/AgriLink) |
+| **Webcam Spyware Security** | Real-time intruder detection with facial recognition & system threat detection | Python, OpenCV, PowerShell | [GitHub](https://github.com/adithyayanamalamanda/webcam-spyware-security) |
+| **Mission Placements** | Placement preparation platform bridging education and employment | Web Platform | [GitHub](https://github.com/adithyayanamalamanda/mission-placements) |
+| **Youth Mental Wellness** | AI-powered mental health assessment with OAuth & PDF reports | JavaScript, AI/ML | [GitHub](https://github.com/adithyayanamalamanda/youth-mental-wellness) |
+| **NetraOS** | OS-inspired UI with modular component library for responsive web | React.js, TypeScript, Vite | [GitHub](https://github.com/adithyayanamalamanda/NetraOS) |
 
 ## 🛠️ Tech Stack
 ```mermaid
