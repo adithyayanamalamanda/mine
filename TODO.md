@@ -1,10 +1,9 @@
-# Task: Separate Portfolio Files (HTML/CSS/JS + README)
+# Portfolio Task Progress - Update Portfolio Website
 
-## Steps to Complete (Approved Plan)
-- [ ] Step 1: Create `styles.css` with all CSS from index.html `<style>` block
-- [ ] Step 2: Create `script.js` with all JS from index.html `<script>` block  
-- [ ] Step 3: Update `index.html` - remove inline CSS/JS, add external links
-- [ ] Step 4: Create `README.md` with project documentation
-- [ ] Step 5: Test functionality and complete
+## Steps for "also update in my portfolio"
+- [x] Add Aura project to projects section in index.html #projects (added as #6)
+- [x] Update hero stats Projects Built count to 6+
+- [x] Commit and push to GitHub mine/main (commit 83cab15)
+- [x] Update TODO
 
-**Progress: 0/5**
+**Complete - Portfolio website updated with Aura project and count!**
