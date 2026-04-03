@@ -46,6 +46,7 @@ B.Tech Computer Science student specializing in **Data Science** at Andhra Loyol
 | **Mission Placements** | Placement preparation platform bridging education and employment | Web Platform | [GitHub](https://github.com/adithyayanamalamanda/mission-placements) |
 | **Youth Mental Wellness** | AI-powered mental health assessment with OAuth & PDF reports | JavaScript, AI/ML | [GitHub](https://github.com/adithyayanamalamanda/youth-mental-wellness) |
 | **NetraOS** | OS-inspired UI with modular component library for responsive web | React.js, TypeScript, Vite | [GitHub](https://github.com/adithyayanamalamanda/NetraOS) |
+| **Aura** | Cutting-edge project showcasing advanced [web/UI/ML/etc.] capabilities *(Added from GitHub)* | [Tech stack] | [GitHub](https://github.com/adithyayanamalamanda/Aura) |
 
 ## 🛠️ Tech Stack
 ```mermaid
