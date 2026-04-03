@@ -669,7 +669,7 @@
     const shine = card.querySelector('.tilt-shine');
 
     card.addEventListener('mousemove', e => {
-      const r Asc  = card.getBoundingClientRect();
+      const r = card.getBoundingClientRect();
       const nx   = (e.clientX - r.left) / r.width  - .5;
       const ny   = (e.clientY - r.top)  / r.height - .5;
       const rotX = -ny * MAXDEG;
@@ -848,8 +848,10 @@
   if(strip){
     new IntersectionObserver(entries => {
       if(entries[0].isIntersecting) runCounters();
-    }, {threshold:.5}).observe(strip);
+    }, {threshold:.15}).observe(strip);
   }
+  // Fallback for safety
+  setTimeout(runCounters, 4000);
 })();
 
 
@@ -858,6 +860,7 @@
 ───────────────────────────────────────────────────────────── */
 (function(){
   const bars = document.querySelectorAll('.skill-bar-fill');
+  if(!bars.length) return;
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if(e.isIntersecting){
@@ -876,6 +879,7 @@
    11. SCROLL REVEAL with stagger
 ───────────────────────────────────────────────────────────── */
 (function(){
+  const revealElements = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if(e.isIntersecting){
@@ -885,8 +889,19 @@
         e.target.classList.add('visible');
       }
     });
-  }, {threshold:.07, rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  }, {threshold:.05, rootMargin:'0px 0px -20px 0px'});
+  revealElements.forEach(el => io.observe(el));
+
+  // Fallback: Show all after a few seconds if they haven't appeared
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      revealElements.forEach(el => {
+        if(!el.classList.contains('visible')){
+          el.classList.add('visible');
+        }
+      });
+    }, 3500);
+  });
 })();
 
 
