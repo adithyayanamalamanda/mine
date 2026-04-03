@@ -1,104 +1,103 @@
-# Yanamalamanda Adithya - Personal Portfolio 🚀
+<div align="center">
+  <img src="assets/hero-banner.png" alt="Portfolio Banner" width="100%">
+  
+  # 🚀 Adithya | Data Science & Cybersecurity 🛡️
+  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yanamalamanda-adithya-9852a9366/)
+  [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/adithyayanamalamanda)
+  [![Netlify](https://img.shields.io/badge/Live-Demo-00AD9F?style=for-the-badge&logo=netlify&logoColor=white)](https://adithya-portfolio1.netlify.app/)
+  
+  ### *Building the secure future of intelligent systems.*
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/some-id/deploy-status)](https://adithya-portfolio1.netlify.app/)
+  [About](#-the-vision) • [Tech Stack](#-core-stack) • [Projects](#-featured-innovations) • [Connect](#-get-in-touch)
+</div>
 
-Welcome to my personal portfolio! This project showcases my skills in **Data Science**, **Cybersecurity**, and full-stack web development through an interactive, modern UI.
+---
 
-## 📋 Table of Contents
-- [Live Demo](#🌐-live-demo)
-- [About Me](#👨‍💻-about-me)
-- [Skills & Certifications](#🏆-skills--certifications)
-- [Featured Projects](#🔥-featured-projects)
-- [Tech Stack](#🛠️-tech-stack)
-- [Features](#✨-features)
-- [Getting Started](#🏁-getting-started)
-- [Roadmap](#🗺️-roadmap)
-- [Contributing](#🤝-contributing)
-- [License](#📄-license)
-- [Contact](#📫-contact)
+## 🌟 The Vision
+Greetings! I'm **Yanamalamanda Adithya**, a B.Tech Computer Science student at ALIET, specializing in Data Science. My work lives at the intersection of **AI/ML** and **Cybersecurity** — creating intelligent tools that are built to be resilient from the ground up.
 
-## 🌐 Live Demo
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://adithya-portfolio1.netlify.app/)
+> *"Turning data into decisions and systems into fortresses."*
 
-## 👨‍💻 About Me
-B.Tech Computer Science student specializing in **Data Science** at Andhra Loyola Institute of Engineering and Technology.
+---
 
-**Passions:** AI/ML + Cybersecurity. Building intelligent, secure systems.
+## 🛠️ Core Stack
 
-**Initiatives:**
-- Co-founder of **Mission Placements**
-- NSS volunteer promoting digital literacy
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>Data Science & AI</b></td>
+      <td align="center"><b>Cybersecurity</b></td>
+      <td align="center"><b>Web Infrastructure</b></td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+        <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
+        <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" />
+        <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" />
+      </td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Kali_Linux-557C94?style=flat-square&logo=kali-linux&logoColor=white" />
+        <img src="https://img.shields.io/badge/Nmap-83B81A?style=flat-square&logo=nmap&logoColor=white" />
+        <img src="https://img.shields.io/badge/Metasploit-BF1E2D?style=flat-square&logo=metasploit&logoColor=white" />
+        <img src="https://img.shields.io/badge/Ethical_Hacking-000000?style=flat-square&logo=hack-the-box&logoColor=white" />
+      </td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+        <img src="https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white" />
+        <img src="https://img.shields.io/badge/Netlify-00AD9F?style=flat-square&logo=netlify&logoColor=white" />
+      </td>
+    </tr>
+  </table>
+</div>
 
-## 🏆 Skills & Certifications
-| Category | Skills/Tools | Certifications |
-|----------|--------------|----------------|
-| **Languages** | Python, JavaScript, HTML/CSS | - |
-| **Data Science/ML** | Pandas, Scikit-learn, TensorFlow | Google Data Analytics |
-| **Cybersecurity** | Ethical Hacking, Network Security | CompTIA Security+ |
-| **Web Dev** | React, Node.js, Canvas API | - |
-| **Tools** | Git, Docker, AWS | AWS Certified Cloud Practitioner |
+---
 
-## 🔥 Featured Projects
-| Project | Description | Tech | Link |
-|---------|-------------|------|------|
-| **AgriLink** | Comprehensive agricultural platform with land monitoring, equipment rental, market prices | JavaScript, Frontend | [GitHub](https://github.com/adithyayanamalamanda/AgriLink) |
-| **Webcam Spyware Security** | Real-time intruder detection with facial recognition & system threat detection | Python, OpenCV, PowerShell | [GitHub](https://github.com/adithyayanamalamanda/webcam-spyware-security) |
-| **Mission Placements** | Placement preparation platform bridging education and employment | Web Platform | [GitHub](https://github.com/adithyayanamalamanda/mission-placements) |
-| **Youth Mental Wellness** | AI-powered mental health assessment with OAuth & PDF reports | JavaScript, AI/ML | [GitHub](https://github.com/adithyayanamalamanda/youth-mental-wellness) |
-| **NetraOS** | OS-inspired UI with modular component library for responsive web | React.js, TypeScript, Vite | [GitHub](https://github.com/adithyayanamalamanda/NetraOS) |
-| **Aura** | Cutting-edge project showcasing advanced [web/UI/ML/etc.] capabilities *(Added from GitHub)* | [Tech stack] | [GitHub](https://github.com/adithyayanamalamanda/Aura) |
+## 🔥 Featured Innovations
 
-## 🛠️ Tech Stack
-```mermaid
-graph TD
-    A[HTML5/CSS3/JS] --> B[Canvas API]
-    B --> C[Particle Effects]
-    C --> D[Responsive Design]
-    D --> E[Glassmorphism UI]
-```
+<table>
+  <tr>
+    <td width="33%">
+      <h3>🌱 AgriLink</h3>
+      <p>A comprehensive agricultural platform integrating land monitoring and market dynamics.</p>
+      <a href="https://github.com/adithyayanamalamanda/AgriLink">View Source →</a>
+    </td>
+    <td width="33%">
+      <h3>🛡️ Spyware Security</h3>
+      <p>Real-time webcam intruder detection using Facial Recognition and dual logging.</p>
+      <a href="https://github.com/adithyayanamalamanda/webcam-spyware-security">View Source →</a>
+    </td>
+    <td width="33%">
+      <h3>🧠 Mental Wellness</h3>
+      <p>AI-powered mental assessment engine with automated HIPAA-compliant reporting.</p>
+      <a href="https://github.com/adithyayanamalamanda/youth-mental-wellness">View Source →</a>
+    </td>
+  </tr>
+</table>
 
-- **Frontend:** HTML5, CSS3 (variables, animations), Vanilla JS
-- **Animations:** Custom Canvas particles, magnetic cursor, gradient blobs
-- **Design:** Dark theme, neon accents (Cyan/Orange/Purple)
+---
 
-## ✨ Features
-- ✅ Interactive particle bursts on click
-- ✅ Magnetic/lerping cursor trailer
-- ✅ Ambient animated backgrounds
-- ✅ Fully responsive (mobile-first)
-- ✅ Smooth scroll animations
-- ✅ Dynamic project showcase
+## 📈 GitHub Metrics
 
-## 🏁 Getting Started
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/adithyayanamalamanda/mine.git
-   cd mine
-   ```
-2. Open `index.html` in browser.
-3. No build required – pure static site!
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=adithyayanamalamanda&show_icons=true&theme=tokyonight&count_private=true" alt="GitHub Stats" />
+  <br>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adithyayanamalamanda&layout=compact&theme=tokyonight&hide=html,css" alt="Top Languages" />
+</div>
 
-## 🗺️ Roadmap
-- [ ] Add React version
-- [ ] Integrate backend API for projects
-- [ ] PWA support
-- [ ] More cybersecurity demos
+---
 
-## 🤝 Contributing
-1. Fork the repo
-2. Create feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push (`git push origin feature/AmazingFeature`)
-5. Open Pull Request
+## 📫 Get in Touch
 
-## 📄 License
-This project is [MIT](LICENSE) licensed.
+- **LinkedIn**: [adithya-yanamalamanda](https://www.linkedin.com/in/yanamalamanda-adithya-9852a9366/)
+- **Email**: [adithyayanamalamanda@gmail.com](mailto:adithyayanamalamanda@gmail.com)
+- **LeetCode**: [1Mn6Iqzqh4](https://leetcode.com/u/1Mn6Iqzqh4/)
+- **GFG**: [adithyayana](https://www.geeksforgeeks.org/profile/adithyayana)
 
-## 📫 Contact
-- **Portfolio:** https://adithya-portfolio1.netlify.app/
-- **LinkedIn:** [Adithya Yanamalamanda](https://linkedin.com/in/adithya-yanamalamanda)
-- **Email:** adithya@example.com
-- **GitHub:** [adithyayanamalamanda](https://github.com/adithyayanamalamanda)
+---
 
-⭐ **Star this repo if you like it!**
-
+<div align="center">
+  <sub>Built with ❤️ by Adithya. Let's build something extraordinary.</sub>
+</div>
